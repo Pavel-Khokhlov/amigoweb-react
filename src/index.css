@@ -1,0 +1,19 @@
+@import url(./vendors/normalize.css);
+@import url(./vendors/fonts/fonts.css);
+
+@import url(./block/root/root.css);
+
+body {
+  margin: 0;
+  font-family: 'IBMPlexSans',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #E5E5E5;
+}
+
+code {
+  font-family: 'IBMPlexSans', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,23 @@
+@import url(./__submit/button__submit.css);
+@import url(./__word/button__word.css);
+
+.button {
+  /* сброс стилей */
+  cursor: pointer;
+  /* настройки кнопок */
+  opacity: 1;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.button:active {
+  outline-style: none;
+}
+
+.button:focus {
+  outline-style: none;
+}

@@ -1,0 +1,15 @@
+@import url(./__container/form__container.css);
+@import url(./__container/form__container.css);
+@import url(./__body/form__body.css);
+@import url(./__title/form__title.css);
+@import url(./__text/form__text.css);
+@import url(./__paragraph/form__paragraph.css);
+@import url(./__checkbox/form__checkbox.css);
+
+.form {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}

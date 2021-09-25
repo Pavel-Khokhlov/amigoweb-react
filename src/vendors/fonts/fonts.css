@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: local('IBMPlexSans'), url(./IBMPlexSans-Bold.ttf) format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: local('IBMPlexSans'), url(./IBMPlexSans-Medium.ttf) format('woff');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: local('IBMPlexSans'), url(./IBMPlexSans-Regular.ttf) format('woff');
+  font-style: normal;
+  font-weight: normal;
+}

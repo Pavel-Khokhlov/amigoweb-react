@@ -1,0 +1,7 @@
+.button__submit_invalid {
+  color: #B1B5BF;
+  background: #DBE2EA;
+  pointer-events: none;
+  cursor: not-allowed !important;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.08);
+}

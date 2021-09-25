@@ -1,0 +1,9 @@
+@import url(./_checkbox/form__text_checkbox.css);
+@import url(./_redirect/form__text_redirect.css);
+
+.form__text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}

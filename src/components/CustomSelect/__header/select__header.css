@@ -1,0 +1,7 @@
+.select__header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
