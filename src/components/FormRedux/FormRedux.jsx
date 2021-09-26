@@ -92,7 +92,7 @@ const FormRedux = () => {
               <input type="checkbox" name="checkbox" defaultChecked={checkboxReg} />
             </div>
             <p className="form__paragraph">принимаю</p>
-            <NavLink to={"/signin"} className="button button__word">
+            <NavLink to={"/conditions"} className="button button__word">
               условия
             </NavLink>
             <p className="form__paragraph">использования</p>

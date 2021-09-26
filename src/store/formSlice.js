@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { REG_EMAIL, REG_PHONE } from "../utils/config";
+import { REG_EMAIL, REG_MANE, REG_PHONE } from "../utils/config";
 
 const formSlice = createSlice({
   name: "form",
@@ -29,10 +29,10 @@ const formSlice = createSlice({
           };
           return;
         }
-        if (state.values.name.length < 2) {
+        if (!REG_MANE.test(state.values.name)) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Имя должено быть больше 2 символов",
+            [action.payload]: "Имя должно содержать буквы, тире или пробел",
           };
           return;
         }
@@ -68,7 +68,7 @@ const formSlice = createSlice({
         if (!REG_PHONE.test(state.values.phone)) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Номер должен содержать цифры",
+            [action.payload]: "Номер может содержать только цифры, - / + / () и пробелы",
           };
           return;
         }
