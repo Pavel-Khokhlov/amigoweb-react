@@ -1,24 +1,38 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useFormWithValidation } from "../Hooks/useForm.jsx";
 
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 
-import "./Form.css";
+import "./FormRedux.css";
 import { NavLink } from "react-router-dom";
-import CustomSelect from "../CustomSelect/CustomSelect.jsx";
-import { clearForm, setCurrentUser, toggleCheckboxReg } from "../../store/appSlice.js";
-import { PATTERN_EMAIL, PATTERN_PHONE } from "../../utils/config.js";
+import { handleValuesChange, resetForm, toggleCheckboxReg, validateForm, validateMessage } from "../../store/formSlice.js";
+import CustomSelect from "../CustomSelect/CustomSelect";
+import { handlePopup, setCurrentUser } from "../../store/appSlice";
 
-const Form = () => {
+const FormRedux = () => {
   const dispatch = useDispatch();
-  const { values, errors, isValid, handleChange, resetForm } =
-    useFormWithValidation();
-  const { currentLanguage, checkboxReg } = useSelector((state) => state.app);
+  const { values, checkboxReg, currentLanguage, errors, isFormValid } = useSelector((state) => state.form);
 
   function handleClickCheckbox(e) {
     dispatch(toggleCheckboxReg());
+    dispatch(validateForm());
   }
+
+  const checkboxClassName = `form__checkbox ${
+    checkboxReg ? "checkbox_active" : ""
+  }`;
+
+  const submitButtonClassName = `button__submit ${
+    isFormValid ? "button__submit_valid" : "button__submit_invalid"
+  }`;
+
+  const handleChange = (e) => {
+    dispatch(
+      handleValuesChange({ name: e.target.name, value: e.target.value })
+    );
+    dispatch(validateMessage(e.target.name));
+    dispatch(validateForm());
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,19 +44,9 @@ const Form = () => {
         language: currentLanguage,
       })
     );
-    resetForm();
-    dispatch(clearForm());
+    dispatch(resetForm());
+    dispatch(handlePopup(true));
   };
-
-  const checkboxClassName = `form__checkbox ${
-    checkboxReg ? "checkbox_active" : ""
-  }`;
-
-  const submitButtonClassName = `button__submit ${
-    isValid && checkboxReg && currentLanguage !== "Язык"
-      ? "button__submit_valid"
-      : "button__submit_invalid"
-  }`;
 
   return (
     <section className="form">
@@ -54,37 +58,33 @@ const Form = () => {
             Войти
           </NavLink>
         </div>
-        <form onSubmit={handleSubmit} className="form__body" noValidate>
+        <form onSubmit={handleSubmit} className="form__body">
           <Input
             type="text"
             inputName="name"
             labelName="Имя"
             value={values.name || ""}
-            onChange={handleChange}
+            onInput={handleChange}
             errors={errors.name}
             placeholder="Введите Ваше имя"
-            minLength='2'
           />
           <Input
             type="email"
             inputName="email"
             labelName="Email"
             value={values.email || ""}
-            onChange={handleChange}
+            onInput={handleChange}
             errors={errors.email}
-            pattern={PATTERN_EMAIL}
             placeholder="Введите ваш email"
           />
           <Input
-            type="text"
+            type="tel"
             inputName="phone"
             labelName="Номер телефона"
             value={values.phone || ""}
-            onChange={handleChange}
+            onInput={handleChange}
             errors={errors.phone}
-            pattern={PATTERN_PHONE}
             placeholder="Введите номер телефона"
-            minLength='10'
           />
           <CustomSelect labelName="Язык" />
           <div className="form__text form__text_checkbox">
@@ -110,4 +110,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormRedux;

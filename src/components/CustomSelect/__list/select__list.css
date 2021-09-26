@@ -11,6 +11,6 @@
   border-radius: 6px;
   box-sizing: border-box;
   transition: 0.3s ease-out;
-  transform: perspective(500px) translate(0px, -60%) rotateX(70deg) scale(0.9);
-  z-index: 3;
+  transform: perspective(500px) translate(0px, -60%) rotateX(70deg) scale(0.8);
+  z-index: 2;
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setCurrentLanguage, toggleLanguageListOpen } from "../../store/appSlice";
+import { setCurrentLanguage, toggleLanguageListOpen } from "../../store/formSlice";
 import "./CustomSelect.css";
 
 function CustomSelect({ labelName }) {
   const dispatch = useDispatch();
   const { languageList, currentLanguage, isLanguageListOpen } = useSelector(
-    (state) => state.app
+    (state) => state.form
   );
 
   const handleSelect = () => {
