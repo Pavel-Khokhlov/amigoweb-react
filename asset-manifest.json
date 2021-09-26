@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4421fb09.chunk.css",
-    "main.js": "/static/js/main.717f532f.chunk.js",
-    "main.js.map": "/static/js/main.717f532f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.cdb07ef2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.cdb07ef2.js.map",
-    "static/js/2.0323160a.chunk.js": "/static/js/2.0323160a.chunk.js",
-    "static/js/2.0323160a.chunk.js.map": "/static/js/2.0323160a.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.4421fb09.chunk.css.map": "/static/css/main.4421fb09.chunk.css.map",
-    "static/js/2.0323160a.chunk.js.LICENSE.txt": "/static/js/2.0323160a.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/IBMPlexSans-Regular.1525928a.ttf",
-    "static/media/FormRedux.css": "/static/media/icon.68dc9ac2.svg",
-    "static/media/CustomSelect.css": "/static/media/select.02a4711a.svg"
+    "main.css": "/amigoweb-react/static/css/main.892959b1.chunk.css",
+    "main.js": "/amigoweb-react/static/js/main.15ddabb5.chunk.js",
+    "main.js.map": "/amigoweb-react/static/js/main.15ddabb5.chunk.js.map",
+    "runtime-main.js": "/amigoweb-react/static/js/runtime-main.02bc7cbf.js",
+    "runtime-main.js.map": "/amigoweb-react/static/js/runtime-main.02bc7cbf.js.map",
+    "static/js/2.0323160a.chunk.js": "/amigoweb-react/static/js/2.0323160a.chunk.js",
+    "static/js/2.0323160a.chunk.js.map": "/amigoweb-react/static/js/2.0323160a.chunk.js.map",
+    "index.html": "/amigoweb-react/index.html",
+    "static/css/main.892959b1.chunk.css.map": "/amigoweb-react/static/css/main.892959b1.chunk.css.map",
+    "static/js/2.0323160a.chunk.js.LICENSE.txt": "/amigoweb-react/static/js/2.0323160a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/amigoweb-react/static/media/IBMPlexSans-Regular.1525928a.ttf",
+    "static/media/FormRedux.css": "/amigoweb-react/static/media/icon.68dc9ac2.svg",
+    "static/media/CustomSelect.css": "/amigoweb-react/static/media/select.02a4711a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.cdb07ef2.js",
+    "static/js/runtime-main.02bc7cbf.js",
     "static/js/2.0323160a.chunk.js",
-    "static/css/main.4421fb09.chunk.css",
-    "static/js/main.717f532f.chunk.js"
+    "static/css/main.892959b1.chunk.css",
+    "static/js/main.15ddabb5.chunk.js"
   ]
 }
