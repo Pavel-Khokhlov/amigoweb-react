@@ -4,6 +4,9 @@
 
 *Technologies*
 HTML, CSS, ReactJS, REDUX-Toolkit
+Created component CustomSelect
+Created component CustomCheckbox
+Created Validation inside REDUX-Toolkit
 
 ***TASKS***
 1. Сверстать компонент формы с использованием React JS

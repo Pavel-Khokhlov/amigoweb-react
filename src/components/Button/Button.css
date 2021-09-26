@@ -1,6 +1,8 @@
 @import url(./__submit/button__submit.css);
 @import url(./__word/button__word.css);
 @import url(./__close-menu/button__close-menu.css);
+@import url(./__checkbox/button__checkbox.css);
+@import url(./__checkbox/_active/button__checkbox_active.css);
 
 .button {
   /* сброс стилей */

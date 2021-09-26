@@ -32,7 +32,7 @@ const formSlice = createSlice({
         if (!REG_MANE.test(state.values.name)) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Имя должно содержать буквы, тире или пробел",
+            [action.payload]: "Имя может содержать только буквы, - и пробел",
           };
           return;
         }

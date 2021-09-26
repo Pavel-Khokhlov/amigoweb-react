@@ -5,22 +5,14 @@ import Button from "../Button/Button";
 
 import "./FormRedux.css";
 import { NavLink } from "react-router-dom";
-import { handleValuesChange, resetForm, toggleCheckboxReg, validateForm, validateMessage } from "../../store/formSlice.js";
+import { handleValuesChange, resetForm, validateForm, validateMessage } from "../../store/formSlice.js";
 import CustomSelect from "../CustomSelect/CustomSelect";
 import { handlePopup, setCurrentUser } from "../../store/appSlice";
+import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 
 const FormRedux = () => {
   const dispatch = useDispatch();
   const { values, checkboxReg, currentLanguage, errors, isFormValid } = useSelector((state) => state.form);
-
-  function handleClickCheckbox(e) {
-    dispatch(toggleCheckboxReg());
-    dispatch(validateForm());
-  }
-
-  const checkboxClassName = `form__checkbox ${
-    checkboxReg ? "checkbox_active" : ""
-  }`;
 
   const submitButtonClassName = `button__submit ${
     isFormValid ? "button__submit_valid" : "button__submit_invalid"
@@ -87,16 +79,7 @@ const FormRedux = () => {
             placeholder="Введите номер телефона"
           />
           <CustomSelect labelName="Язык" />
-          <div className="form__text form__text_checkbox">
-            <div className={checkboxClassName} onClick={handleClickCheckbox}>
-              <input type="checkbox" name="checkbox" defaultChecked={checkboxReg} />
-            </div>
-            <p className="form__paragraph">принимаю</p>
-            <NavLink to={"/conditions"} className="button button__word">
-              условия
-            </NavLink>
-            <p className="form__paragraph">использования</p>
-          </div>
+          <CustomCheckbox />
           <Button
             type="button"
             className={submitButtonClassName}
