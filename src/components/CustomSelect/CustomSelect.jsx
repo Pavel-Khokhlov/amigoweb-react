@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setCurrentLanguage, toggleLanguageListOpen } from "../../store/formSlice";
+import {
+  setCurrentLanguage,
+  toggleLanguageListOpen,
+} from "../../store/formSlice";
 import "./CustomSelect.css";
 
 function CustomSelect({ labelName }) {
@@ -17,7 +20,9 @@ function CustomSelect({ labelName }) {
     dispatch(setCurrentLanguage(e.target.innerText));
   };
 
-  const selectListClassName = `select__list ${isLanguageListOpen ? "select__list_active" : ""}`;
+  const selectListClassName = `select__list ${
+    isLanguageListOpen ? "select__list_active" : ""
+  }`;
 
   return (
     <div className="select input">

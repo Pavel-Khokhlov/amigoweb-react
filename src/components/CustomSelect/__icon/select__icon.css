@@ -1,9 +1,10 @@
 .select__icon {
+  pointer-events: none;
   position: absolute;
-  top: 20px;
+  top: 16px;
   right: 16px;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 24px;
   background-image: url(../../../images/select.svg);
   background-position: center;
   background-repeat: no-repeat;

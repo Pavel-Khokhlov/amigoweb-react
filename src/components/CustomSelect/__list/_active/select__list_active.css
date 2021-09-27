@@ -1,3 +1,4 @@
 .select__list_active {
-  transform: perspective(0px) translate(0px, 0px) rotateX(0deg) scale(1);
+  top: 53px;
+  height: 176px;
 }
