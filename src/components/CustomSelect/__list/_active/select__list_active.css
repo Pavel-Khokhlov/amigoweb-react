@@ -1,4 +1,11 @@
 .select__list_active {
-  top: 53px;
+  top: min(53px, 10vw);
   height: 176px;
+}
+
+@media only screen and (max-width: 430px) {
+  .select__list_active {
+    height: 130px;
+    overflow: auto;
+  }
 }

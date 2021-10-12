@@ -32,7 +32,7 @@ const formSlice = createSlice({
         if (!REG_MANE.test(state.values.name)) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Имя может содержать только буквы, - и пробел",
+            [action.payload]: "Только буквы, - и пробел",
           };
           return;
         }
@@ -43,14 +43,14 @@ const formSlice = createSlice({
         if (state.values.email.length === 0) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Необходимо ввести E-mail",
+            [action.payload]: "Введите E-mail",
           };
           return;
         }
         if (!REG_EMAIL.test(state.values.email)) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Введите корректный E-mail!",
+            [action.payload]: "Введите корректный E-mail",
           };
           return;
         }
@@ -61,14 +61,14 @@ const formSlice = createSlice({
         if (state.values.phone.length === 0) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Необходимо ввести номер телефона",
+            [action.payload]: "Ввести номер телефона",
           };
           return;
         }
         if (!REG_PHONE.test(state.values.phone)) {
           state.errors = {
             ...state.errors,
-            [action.payload]: "Номер может содержать только цифры, - / + / () и пробелы",
+            [action.payload]: "Используйье только цифры, - / + / () и пробел",
           };
           return;
         }
@@ -83,14 +83,14 @@ const formSlice = createSlice({
         return;
       }
     },
-    toggleLanguageListOpen(state, action) {
+    toggleLanguageListOpen(state) {
       state.isLanguageListOpen = !state.isLanguageListOpen;
     },
     setCurrentLanguage(state, action) {
       state.currentLanguage = action.payload;
       state.selectLang = true;
     },
-    toggleCheckboxReg(state, action) {
+    toggleCheckboxReg(state) {
       state.checkboxReg = !state.checkboxReg;
     },
     validateForm(state) {

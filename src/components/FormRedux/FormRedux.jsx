@@ -7,12 +7,13 @@ import "./FormRedux.css";
 import { NavLink } from "react-router-dom";
 import { handleValuesChange, resetForm, validateForm, validateMessage } from "../../store/formSlice.js";
 import CustomSelect from "../CustomSelect/CustomSelect";
-import { handlePopup, setCurrentUser } from "../../store/appSlice";
+import { handlePopup } from "../../store/appSlice";
+import { setCurrentUser } from "../../store/userSlice";
 import CustomCheckbox from "../CustomCheckbox/CustomCheckbox";
 
 const FormRedux = () => {
   const dispatch = useDispatch();
-  const { values, checkboxReg, currentLanguage, errors, isFormValid } = useSelector((state) => state.form);
+  const { values, currentLanguage, errors, isFormValid } = useSelector((state) => state.form);
 
   const submitButtonClassName = `button__submit ${
     isFormValid ? "button__submit_valid" : "button__submit_invalid"

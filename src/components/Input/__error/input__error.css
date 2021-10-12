@@ -1,5 +1,5 @@
 .input__error {
-  font-size: 14px;
+  font-size: min(14px, 3.2vw);
   font-weight: normal;
   line-height: 18px;
   height: 18px;

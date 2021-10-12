@@ -1,6 +1,6 @@
 .input__label {
   font-weight: 500;
-  font-size: 16px;
+  font-size: min(16px, 4vw);
   line-height: 21px;
   color: #756f86;
   margin: 0;

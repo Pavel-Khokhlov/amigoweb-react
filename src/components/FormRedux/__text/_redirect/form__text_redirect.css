@@ -1,3 +1,10 @@
 .form__text_redirect {
-  margin-bottom: 58px;
+  justify-content: flex-start;
+  margin-bottom: min(20px, 2vw);
+}
+
+@media only screen and (max-width: 430px) {
+  .form__text_redirect {
+    justify-content: center;
+  }
 }

@@ -2,5 +2,5 @@
   color: #0880ae;
   text-decoration: none;
   font-weight: normal;
-  font-size: 16px;
+  font-size: min(16px, 4vw);
 }

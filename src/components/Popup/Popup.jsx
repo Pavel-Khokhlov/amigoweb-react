@@ -6,7 +6,8 @@ import "./Popup.css";
 
 const Popup = () => {
   const dispatch = useDispatch();
-  const { currentUser, isPopupOpen } = useSelector((state) => state.app);
+  const { currentUser } = useSelector((state) => state.user);
+  const { isPopupOpen } = useSelector((state) => state.app);
 
   const handleClosePopup = () => {
     dispatch(handlePopup(false));
@@ -28,7 +29,7 @@ const Popup = () => {
       >
         <Button
           type="button"
-          className="button button__close-menu"
+          className="button button__close-popup"
           onClick={handleClosePopup}
         />
         <h2>Current User</h2>

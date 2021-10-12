@@ -2,7 +2,7 @@
 @import url(./_invalid/button__submit_invalid.css);
 
 .button__submit {
-  height: 56.57px;
+  height: min(56.57px, 12vw);
   border: none;
   border-radius: 6px;
   font-weight: bold;

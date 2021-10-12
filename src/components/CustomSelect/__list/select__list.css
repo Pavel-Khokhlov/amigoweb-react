@@ -1,7 +1,7 @@
 .select__list {
   position: absolute;
   top: 0;
-  height: 50px;
+  height: min(53px, 10vw);
   width: 100%;
   list-style: none;
   margin: 0;
